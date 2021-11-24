@@ -12,15 +12,13 @@
     <div id="myThridDiv"></div>
     <div id="myFourthDiv"></div>
     <script>
-      const myFirstDiv = document.querySelector("#myFirstDiv");
-      const mySecondDiv = document.querySelector("#mySecondDiv");
-      const myThirdDiv = document.querySelector("#myThirdDiv");
-      const myFourthDiv = document.querySelector("#myFourthDiv");
+      // const myFirstDiv = document.querySelector("#myFirstDiv");
+      // const mySecondDiv = document.querySelector("#mySecondDiv");
+      // const myThirdDiv = document.querySelector("#myThirdDiv");
+      // const myFourthDiv = document.querySelector("#myFourthDiv");
 
-      let allDiv = document.querySelectorAll("div");
-      allDiv.forEach((div) => {
-        console.log(div.id);
-      });
+      const [myFirstDiv, mySecondDiv, myThirdDiv, myFourthDiv] = document.querySelectorAll("div");
+      console.log(myFirstDiv);
     </script>
   </body>
 </html>
