@@ -22,13 +22,13 @@ initial-scale=1.0"
     <input type="text" />
   </body>
   <script>
-    let allElements = document.body.children;
-    for (let i = 0; i < allElements.length; i++) {
-      console.log(allElements[i]);
-    }
-    let allElementsQuery = document.querySelectorAll("*");
-    for (let i = 0; i < allElementsQuery.length; i++) {
-      console.log(allElementsQuery[i]);
+    // let allElements = document.body.children;
+    // for (let i = 0; i < allElements.length; i++) {
+    //   console.log(allElements[i]);
+    // }
+    let allElementsQuery = document.querySelectorAll("body *");
+    for (let element of allElementsQuery) {
+      console.log(element);
     }
   </script>
 </html>
