@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const div = document.createElement("div");
+      div.style.display = "flex";
+      div.style.flexDirection = "column";
+      div.style.justifyContent = "center";
+      div.style.alignItems = "center";
+      const head = document.createElement("h2");
+      head.textContent = "what is your age?";
+      div.appendChild(head);
+      let input = document.createElement("input");
+      input.type = "text";
+      input.style.height = "30px";
+      div.append(input);
+      let button = document.createElement("button");
+      button.value = "submit";
+      button.style.height = "30px";
+      button.style.width = "30px";
+      div.appendChild(button);
+      document.body.appendChild(div);
+      button.addEventListener("click", () => {
+        if (+input.value < 18) {
+          const no = document.createElement("h2");
+          no.textContent = "you can't drink";
+          div.appendChild(no);
+        } else {
+          const yes = document.createElement("h2");
+          yes.textContent = "you can drink";
+          div.appendChild(yes);
+        }
+      });
+    </script>
+  </body>
+</html>
