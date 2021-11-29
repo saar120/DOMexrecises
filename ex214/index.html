@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .lightbulb {
+        height: 200px;
+        width: 200px;
+      }
+      .off {
+        background: url("/ex214/img/pic_bulboff.gif") center center no-repeat;
+      }
+      .on {
+        background: url("/ex214/img/pic_bulbon.gif") center center no-repeat;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="lightbulb off"></div>
+    <button>Turn On</button>
+
+    <script>
+      // selectors
+
+      const btn = document.querySelector("button");
+      const lightBulb = document.querySelector(".lightbulb");
+
+      // event listeners
+
+      btn.addEventListener("click", () => {
+        toggle();
+        changeBtnTxt();
+      });
+
+      // functions
+
+      function toggle() {
+        lightBulb.classList.toggle("off");
+        lightBulb.classList.toggle("on");
+      }
+
+      function changeBtnTxt() {
+        if (lightBulb.classList.contains("on")) {
+          btn.textContent = "Turn Off";
+          return;
+        }
+        btn.textContent = "Turn On";
+      }
+    </script>
+  </body>
+</html>
