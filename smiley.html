@@ -4,25 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: lightblue;
+      }
+      span {
+        font-size: 3rem;
+        padding: 1rem;
+      }
+      .form {
+        margin: 1rem;
+      }
+    </style>
     <title>Smiley</title>
   </head>
   <body>
     <h2>How many Smiley's do you want to see?</h2>
-    <div>
+    <div class="form">
       <input type="number" id="smiley-input" />
       <input id="smiley-button" type="submit" value="Show me the Smiley's" />
     </div>
     <div class="smileys"></div>
 
     <script>
-      let smileyButton = document.querySelector("#smiley-button");
+      const smileyButton = document.querySelector("#smiley-button");
       const printSmiley = () => {
-        let smileyCount = document.querySelector("#smiley-input").value;
+        const smileyCount = document.querySelector("#smiley-input").value;
         const emoji = document.querySelector(".smileys");
         emoji.innerHTML = "";
-        if (smileyCount === NaN || smileyCount < 0 || smileyCount > 100) {
+        if (smileyCount === NaN || smileyCount < 0 || smileyCount > 500) {
           let error = document.createElement("span");
-          error.textContent = "Sorry wrong input";
+          error.textContent = "Sorry wrong input, 0-500 please";
           emoji.appendChild(error);
         } else {
           for (let i = 0; i < smileyCount; i++) {
