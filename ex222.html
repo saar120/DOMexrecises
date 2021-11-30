@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
+    <title>ex 22.2</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="checkbox" name="check" id="check" />
+    </form>
+    <div class="image-container hide">
+      <img src="/images/3408.jpeg" alt="" />
+    </div>
+    <script>
+      const image = document.querySelector(".image-container");
+      const checkBox = document.querySelector("input");
+
+      checkBox.addEventListener("input", (e) => {
+        e.target.checked ? image.classList.remove("hide") : image.classList.add("hide");
+      });
+    </script>
+  </body>
+</html>
