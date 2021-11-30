@@ -14,8 +14,7 @@ minusBtn.addEventListener("click", decFontSize);
 // functions
 
 function incFontSize() {
-  let currentFontSize = window.getComputedStyle(text, null).getPropertyValue("font-size");
-  currentFontSize = parseInt(currentFontSize);
+  let currentFontSize = parseInt(getComputedStyle(text).fontSize);
   if (currentFontSize + 10 > 100) {
     text.style.fontSize = `100px`;
     return;
