@@ -36,12 +36,12 @@ const win = (car) => {
   console.log(car);
   if (car.parentElement.id === "player1-race") {
     winBanner.firstChild.textContent = "Red car won!";
-    winBanner.style.backgroundColor = "red";
+    winBanner.style.backgroundColor = "#FC1015";
     winBanner.classList.toggle("hide");
     return;
   }
   winBanner.firstChild.textContent = "Yellow car won!";
-  winBanner.style.backgroundColor = "yellow";
+  winBanner.style.backgroundColor = "#FFC55B";
   winBanner.classList.toggle("hide");
 };
 
