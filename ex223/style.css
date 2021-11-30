@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.letter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+}
+
+.letter {
+  font-size: 1.5rem;
+}
+
+.key-guessed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
