@@ -12,11 +12,10 @@ Pokemon.prototype.attack = function (num) {
   console.log(`${this.name} used ${this.attackList[num]}`);
 };
 
-const pikachu = new Pokemon("Pikachu", "lightning", ["zetz", "zap", "zip"]);
+const Pikachu = new Pokemon("Pikachu", "lightning", ["zetz", "zap", "zip"]);
 const Bulbasaur = new Pokemon("Bulbasaur", "grass", ["one", "two", "three"]);
 const Charizard = new Pokemon("Charizard", "fire", ["fire", "FIRE", "FiRe"]);
 
-pikachu.attack(2);
-pikachu.callPokemon();
-
+Pikachu.callPokemon();
+Pikachu.attack(2);
 Charizard.attack(2);
