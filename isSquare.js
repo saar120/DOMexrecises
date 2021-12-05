@@ -6,9 +6,9 @@ function Square(a, b, c, d) {
 }
 
 Square.prototype.isSquare = function (a, b, c, d) {
-  return a === c && b === d;
+  return a === c && b === d && c === d && a == d;
 };
 
 Square.prototype.isSquare(4, 3, 4, 1); // false
 
-Square.prototype.isSquare(4, 3, 4, 3); // true
+console.log(Square.prototype.isSquare(4, 4, 4, 4)); // true
