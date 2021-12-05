@@ -6,8 +6,7 @@ function Square(a, b, c, d) {
 }
 
 Square.prototype.isSquare = function (a, b, c, d) {
-  if (a === c && b === d) return true;
-  return false;
+  return a === c && b === d;
 };
 
 Square.prototype.isSquare(4, 3, 4, 1); // false
