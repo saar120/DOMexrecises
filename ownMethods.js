@@ -10,9 +10,12 @@ Array.prototype.myFilter = function (callback) {
   return filteredArr;
 };
 
-const newArrFilter = myArr.myFilter(function (item) {
+function biggerThen3(item) {
   return item > 3;
-});
+}
+
+console.log(myArr.myFilter(biggerThen3()));
+console.log(myArr.filter((x) => biggerThen3(x)));
 
 Array.prototype.myFind = function (callback) {
   for (let i = 0; i < this.length; i++) {
