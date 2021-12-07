@@ -1,0 +1,44 @@
+* {
+  font-family: monospace;
+}
+
+.main {
+  background-color: rgb(73, 140, 140);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 3rem;
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  color: rgb(73, 140, 140);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(73, 140, 140);
+  color: rgb(255, 255, 255);
+}
+
+h1,
+h2,
+h3 {
+  color: rgb(255, 255, 255);
+}
+
+.joke-container {
+  height: 30vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
